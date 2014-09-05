@@ -17,5 +17,7 @@ contamination.
 
 We mapped the reads to against two Tetrahymena thermophila SB210 assemblies:
 
- Micronucleous assembly used GCA_000261185.1 (Gen bank assembly ID), TIGR 2009  
+ Macronucleous assembly used GCA_000261185.1 (Gen bank assembly ID), TIGR 2009  
+   included file: "
  Micronucleous assembly used GCA_000189635.1 (Gen bank assembly ID), BROAD 2013  
+   included file: "tetrahymena_thermophila_sb210__mic__2_supercontigs.fasta.zip"
