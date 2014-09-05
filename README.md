@@ -15,5 +15,7 @@ contamination.
 
 # Mapping paired end reads to 
 
-Micronucleous assembly used GCA_000261185.1 (Gen bank assembly ID), TIGR 2009
-Micronucleous assembly used GCA_000189635.1 (Gen bank assembly ID), BROAD 2013
+We mapped the reads to against two Tetrahymena thermophila SB210 assemblies:
+
+ Micronucleous assembly used GCA_000261185.1 (Gen bank assembly ID), TIGR 2009  
+ Micronucleous assembly used GCA_000189635.1 (Gen bank assembly ID), BROAD 2013  
