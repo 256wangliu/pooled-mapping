@@ -12,3 +12,8 @@ contamination.
 
 
    http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
+
+# Mapping paired end reads to 
+
+Micronucleous assembly used GCA_000261185.1 (Gen bank assembly ID), TIGR 2009
+Micronucleous assembly used GCA_000189635.1 (Gen bank assembly ID), BROAD 2013
