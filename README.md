@@ -64,6 +64,8 @@ bowtie2 --met-file DisA1 -p 10 --local -x ../ref/MAC_MIC.fasta --n-ceil 1  --tri
 *  --rg            - sets the sample name. you --rg tag will look like "SM:yourSampleName"
 *  --rg-id         - set the read group that corrisoponds to the "SM:yourSampleName".  If you only have one read group, "rg-id" can be the same as "--rg"
 
+**Warning: It is important to understand the rg and rg-id settings.  Failures to properly specify either flag will result in a massive headache downstream!**
+
 ## Converting SAM to BAM using Samtools:
 ```
  ~/tools/samtools-0.1.18/samtools view -bS -f 0x3 B1868.sam > B1868.bam ; rm B1868.sam
@@ -74,6 +76,12 @@ The "-bS -f 0x3" flags tell samtools we want to output a bam file "-b" the "S" t
 Only reads that are propoerly paired and mapped properly were kept using "-f 0x3".  For more information on using the "-f" flag look at the samtools documentations and this website:
 
 http://picard.sourceforge.net/explain-flags.html
+
+## Sorting the BAM files by start coordinates:
+```
+~/tools/samtools-0.1.18/samtools sort  B1868.bam  B1868.sort
+~/tools/samtools-0.1.18/samtools sort  DisA1.bam  DisA1.sort
+```
 
 ## Removing optical duplicates.
 
