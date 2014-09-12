@@ -1,7 +1,7 @@
 # Intro
 
 This brief tutorial provides the bare essentials for mapping mutations in pooled NGS data. 
-Specifically this pipeline was used to identify the recessive *DisA* mutation in Tetrahymena.  Please have 
+Specifically this pipeline was used to identify the recessive *DisA* mutation in *Tetrahymena*.  Please have 
 a look at the paper for details about the experimental design and nature of  *DisA*.
 There are many ways to map, call, and identify mutations.  This documents ONLY describes one successful approach. 
 Diverge from this document as it becomes outdated or at your fancy.  
@@ -18,7 +18,7 @@ contamination.
 
 # Mapping paired end reads to reference genome 
 
-We mapped the reads to against two Tetrahymena thermophila SB210 assemblies:
+We mapped the reads to against two *Tetrahymena thermophila* SB210 assemblies:
 
 The Macro nucleous :
    ```
