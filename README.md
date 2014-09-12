@@ -99,3 +99,15 @@ removing duplicates:
  ~/tools/samtools-0.1.18/samtools index B1868.sort.rmdup.bam
  ~/tools/samtools-0.1.18/samtools index DisA1.sort.rmdup.bam
  ```
+
+## Indel realignment 
+
+Indel re-alignment is a two step process that improves the alignments in regions with many INDELs.  In the first step GATK identifies intervals that need to be re-aligned and in the second step they are realigned.  Much more information can be found at the GATK website:
+https://www.broadinstitute.org/gatk/
+
+creating target intervals:
+```
+java -Xmx10g -jar /usr/local/GenomeAnalysisTK-2.4-7-g5e89f01/GenomeAnalysisTK.jar -T RealignerTargetCreator -R ../ref/MIC.MAC.fasta -I  B1868.sort.rmdup.bam -o B1868.sort.rmdup.intervals
+java -Xmx10g -jar /usr/local/GenomeAnalysisTK-2.4-7-g5e89f01/GenomeAnalysisTK.jar -T RealignerTargetCreator -R ../ref/MIC.MAC.fasta -I  DisA1.sort.rmdup.bam -o DisA1.sort.rmdup.intervals
+```
+
