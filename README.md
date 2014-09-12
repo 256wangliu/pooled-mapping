@@ -133,7 +133,7 @@ DisA1.sort.rmdup.realn.bam	32	16	20	20
 
 ```
 
-This information is use by SNVER statistical model.  Notice the *DisA1* sample actually consists of 16 clonal samples (See paper for more information).
+This information is use by SNVER statistical model.  Notice the *DisA1* sample actually consists of 16 clonal samples (see paper for more information).
 
 The command line to call variants:
 
@@ -144,7 +144,7 @@ java -Xmx50g -jar ~/tools/SNVerPool.jar -i ../raw_reads/ -t 0 -a 0 -u 2 -r ../re
 
 ## Finding canidates by filtering samples based on allele frequency
 
-We knew *DisA* was recessive so we setup simple heuristic filters.  This was done with a provided script "filter-recessive.pl."
+We knew *DisA* was recessive so we setup simple heuristic filters.  This was done with "filter-recessive.pl",  a provided perl script.
 
 getting help:
 ```
