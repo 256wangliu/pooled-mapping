@@ -80,13 +80,13 @@ Only reads that are propoerly paired and mapped properly were kept using "-f 0x3
 
 http://picard.sourceforge.net/explain-flags.html
 
-## Sorting the BAM files by start coordinates:
+## Sorting the BAM files by start coordinates
 ```
 ~/tools/samtools-0.1.18/samtools sort  B1868.bam  B1868.sort
 ~/tools/samtools-0.1.18/samtools sort  DisA1.bam  DisA1.sort
 ```
 
-## Removing optical duplicates:
+## Removing optical duplicates
 
 In this step we remove "optical/pcr duplicates".  These duplicate reads are a product of library preperation.  We use Samtools for this step, but Picard would also work.
 
@@ -97,7 +97,7 @@ removing duplicates:
  ~/tools/samtools-0.1.18/samtools rmdup DisA1.sort.bam DisA1.sort.rmdup.bam
  ```
  
-## Indexing the BAMs:
+## Indexing the BAMs
 
  ```
  ~/tools/samtools-0.1.18/samtools index B1868.sort.rmdup.bam
@@ -121,7 +121,7 @@ java -Xmx20g -jar /usr/local/GenomeAnalysisTK-2.4-7-g5e89f01/GenomeAnalysisTK.ja
 java -Xmx20g -jar /usr/local/GenomeAnalysisTK-2.4-7-g5e89f01/GenomeAnalysisTK.jar -T IndelRealigner  -R ../ref/MIC.MAC.fasta -I  DisA1.sort.rmdup.bam -targetIntervals DisA1.sort.rmdup.intervals -o DisA1.sort.rmdup.realn.bam
 ```
 
-## Calling Variants:
+## Calling Variants
 
 For variant calling we used SNVer pooled.  Again there are several other programs that would work for variant calling.  It very much depends on what kind of sample you are working on.  For example if you are trying to identify low frequency variants the tool *LoFreq* might be right for you.  SNVer pooled produces a file for Single Nucleotide Variants SNVs and INDELs.  
 
@@ -142,7 +142,7 @@ java -Xmx50g -jar ~/tools/SNVerPool.jar -i ../raw_reads/ -t 0 -a 0 -u 2 -r ../re
 ```
 
 
-## Finding canidates by filtering samples based on allele frequency:
+## Finding canidates by filtering samples based on allele frequency
 
 We knew *DisA* was recessive so we setup simple heuristic filters.  This was done with a provided script "filter-recessive.pl."
 
