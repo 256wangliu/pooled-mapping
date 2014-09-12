@@ -13,7 +13,7 @@ contamination.
 
    http://www.bioinformatics.babraham.ac.uk/projects/fastqc/
 
-# Mapping paired end reads to 
+# Mapping paired end reads to reference genome 
 
 We mapped the reads to against two Tetrahymena thermophila SB210 assemblies:
 
@@ -32,3 +32,18 @@ Combine the two sequences after unzipping them using cat:
    cat  T_thermophila_June2014_assembly.fasta.txt > MAC_MIC.fasta
    cat  tetrahymena_thermophila_sb210__mic__2_supercontigs.fasta >> MAC_MIC.fasta
    ```
+
+## Using bowtie2 to map the reads 
+
+Bowtie2 or BWA would both work for this step; we used bowtie2.  Follow the instructions on how to install and use bowtie2.
+http://bowtie-bio.sourceforge.net/bowtie2/manual.shtml
+
+
+Index the reference sequence:
+
+```
+bowtie2-build MAC_MIC.fasta MAC_MIC.fasta
+```
+
+
+
