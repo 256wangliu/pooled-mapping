@@ -142,7 +142,7 @@ java -Xmx50g -jar ~/tools/SNVerPool.jar -i ../raw_reads/ -t 0 -a 0 -u 2 -r ../re
 ```
 
 
-## Finding canidates by filtering samples based on allele frequency
+## Identification of canidates by filtering
 
 We knew *DisA* was recessive so we setup simple heuristic filters.  This was done with "filter-recessive.pl",  a provided perl script.
 
