@@ -48,7 +48,19 @@ bowtie2-build MAC_MIC.fasta MAC_MIC.fasta
 Align the reads:
 
 ```
-bowtie2 --met-file B1868 -p 10 --local -x ../ref/MIC.MAC.fasta --n-ceil 1  --trim5 10 --trim3 5 --no-mixed --no-discordant --no-contain --no-overlap  --rg SM:B1868 --rg-id B1868 -1 B1868_ATCACG_L001_R1_001.fastq.gz -2 B1868_ATCACG_L001_R2_001.fastq.gz -S B1868.sam 2> B1868.error
-~/tools/bowtie2-2.0.0-beta6/bowtie2 --met-file DisA1 -p 10 --local -x ../ref/MIC.MAC.fasta --n-ceil 1  --trim5 10 --trim3 5 --no-mixed --no-discordant --no-contain --no-overlap  --rg SM:DisA1 --rg-id DisA1 -1 DisA1_TGACCA_L001_R1_001.fastq.gz -2 DisA1_TGACCA_L001_R2_001.fastq.gz -S DisA1.sam 2> DisA1.error
+bowtie2 --met-file B1868 -p 10 --local -x ../ref/MAC_MIC.fasta --n-ceil 1  --trim5 10 --trim3 5 --no-mixed --no-discordant --no-contain --no-overlap  --rg SM:B1868 --rg-id B1868 -1 B1868_ATCACG_L001_R1_001.fastq.gz -2 B1868_ATCACG_L001_R2_001.fastq.gz -S B1868.sam 2> B1868.error
+bowtie2 --met-file DisA1 -p 10 --local -x ../ref/MAC_MIC.fasta --n-ceil 1  --trim5 10 --trim3 5 --no-mixed --no-discordant --no-contain --no-overlap  --rg SM:DisA1 --rg-id DisA1 -1 DisA1_TGACCA_L001_R1_001.fastq.gz -2 DisA1_TGACCA_L001_R2_001.fastq.gz -S DisA1.sam 2> DisA1.error
 ```
+
+   A description of the options used:
+   
+*  --n-ceil 1  - skip reads with more than one 'N' - these are ambigious bases.  Reads with many ambigious bases should be skipped.
+*  --trim5  10     - trim off 10 bases for each read.  This will solely depend on your data.
+*  --trim3  5      - trim off 5 bases from each read.  This will solely depend on your data.
+*  --no-mixed      - suppress unpaired alignments for paired reads.
+*  --no-discordant - suppress discordant alignments for paired reads.
+*  --no-contain    - not concordant when one mate alignment contains other.
+*  --no-overlap    - not concordant when mates overlap at all.
+*  --rg            - sets the sample name. you --rg tag will look like "SM:yourSampleName"
+*  --rg-id         - set the read group that corrisoponds to the "SM:yourSampleName".  If you only have one read group, "rg-id" can be the same as "--rg"
 
