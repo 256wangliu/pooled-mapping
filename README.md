@@ -133,7 +133,7 @@ DisA1.sort.rmdup.realn.bam	32	16	20	20
 
 ```
 
-This information is use by SNVER statistical model.  Notice the *DisA1* sample acturally consists of 16 clonal samples (See paper for more information).
+This information is use by SNVER statistical model.  Notice the *DisA1* sample actually consists of 16 clonal samples (See paper for more information).
 
 The command line to call variants:
 
