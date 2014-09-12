@@ -116,3 +116,19 @@ running the realignment:
 java -Xmx20g -jar /usr/local/GenomeAnalysisTK-2.4-7-g5e89f01/GenomeAnalysisTK.jar -T IndelRealigner  -R ../ref/MIC.MAC.fasta -I  B1868.sort.rmdup.bam -targetIntervals B1868.sort.rmdup.intervals -o B1868.sort.rmdup.realn.bam
 java -Xmx20g -jar /usr/local/GenomeAnalysisTK-2.4-7-g5e89f01/GenomeAnalysisTK.jar -T IndelRealigner  -R ../ref/MIC.MAC.fasta -I  DisA1.sort.rmdup.bam -targetIntervals DisA1.sort.rmdup.intervals -o DisA1.sort.rmdup.realn.bam
 ```
+
+## Calling Variants:
+
+For variant calling we used SNVer pooled.  Again there are several other programs that would work for variant calling.  It very much depends on what kind of sample you are working on.  For example if you are trying to identify low frequency variants the tool *LoFreq* might be right for you.  SNVer pooled produces a file for Single Nucleotide Variants SNVs and INDELs.  
+
+The config file "snver.file.txt":
+```
+#name	no.haploids	no.samples	mq	bq
+B1868.sort.rmdup.realn.bam	2	1	20	20
+DisA1.sort.rmdup.realn.bam	32	16	20	20
+
+```
+
+
+
+
