@@ -64,3 +64,21 @@ bowtie2 --met-file DisA1 -p 10 --local -x ../ref/MAC_MIC.fasta --n-ceil 1  --tri
 *  --rg            - sets the sample name. you --rg tag will look like "SM:yourSampleName"
 *  --rg-id         - set the read group that corrisoponds to the "SM:yourSampleName".  If you only have one read group, "rg-id" can be the same as "--rg"
 
+## Converting SAM to BAM using Samtools:
+```
+ ~/tools/samtools-0.1.18/samtools view -bS -f 0x3 B1868.sam > B1868.bam ; rm B1868.sam
+ ~/tools/samtools-0.1.18/samtools view -bS -f 0x3 DisA1.sam > DisA1.bam ; rm DisA1.sam
+```
+
+The "-bS -f 0x3" flags tell samtools we want to output a bam file "-b" the "S" tells samtools the imput is SAM format.
+Only reads that are propoerly paired and mapped properly were kept using "-f 0x3".  For more information on using the "-f" flag look at the samtools documentations and this website:
+
+http://picard.sourceforge.net/explain-flags.html
+
+## Removing optical duplicates.
+
+In this step we remove "optical/pcr duplicates".  These duplicate reads are a product of library preperation.  We use Samtools for this step, but Picard would also work.
+
+
+
+removing duplicates:
