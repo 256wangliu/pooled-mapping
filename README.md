@@ -21,4 +21,4 @@ The Macro nucleous :
 
 The Micro nucleous : 
 
-** Warning: The SB10 assemblies and annotations are not final.  Before mapping check which assembly and annotation set is appropriate.** 
+*Warning: The SB10 assemblies and annotations are not final.  Before mapping check which assembly and annotation set is appropriate.*
