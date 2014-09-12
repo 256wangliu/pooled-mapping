@@ -130,6 +130,12 @@ DisA1.sort.rmdup.realn.bam	32	16	20	20
 
 ```
 
+This information is use by SNVER statistical model.  Notice the *DisA1* sample acturally consists of 16 clonal samples (See paper for more information).
 
+The command line to call variants:
+
+```
+java -Xmx50g -jar ~/tools/SNVerPool.jar -i ../raw_reads/ -t 0 -a 0 -u 2 -r ../ref/MIC.MAC.fasta -c snver.file.txt -o teth
+```
 
 
