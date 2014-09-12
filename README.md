@@ -88,7 +88,7 @@ http://picard.sourceforge.net/explain-flags.html
 
 ## Removing optical duplicates
 
-In this step we remove "optical/pcr duplicates".  These duplicate reads are a product of library preperation.  We use Samtools for this step, but Picard would also work.
+In this step we remove "optical/pcr" duplicates.  These duplicate reads are a product of library preperation.  We use Samtools for this step, but Picard would also work.
 
 removing duplicates:
 
