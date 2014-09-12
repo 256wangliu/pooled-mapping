@@ -111,3 +111,8 @@ java -Xmx10g -jar /usr/local/GenomeAnalysisTK-2.4-7-g5e89f01/GenomeAnalysisTK.ja
 java -Xmx10g -jar /usr/local/GenomeAnalysisTK-2.4-7-g5e89f01/GenomeAnalysisTK.jar -T RealignerTargetCreator -R ../ref/MIC.MAC.fasta -I  DisA1.sort.rmdup.bam -o DisA1.sort.rmdup.intervals
 ```
 
+running the realignment:
+```
+java -Xmx20g -jar /usr/local/GenomeAnalysisTK-2.4-7-g5e89f01/GenomeAnalysisTK.jar -T IndelRealigner  -R ../ref/MIC.MAC.fasta -I  B1868.sort.rmdup.bam -targetIntervals B1868.sort.rmdup.intervals -o B1868.sort.rmdup.realn.bam
+java -Xmx20g -jar /usr/local/GenomeAnalysisTK-2.4-7-g5e89f01/GenomeAnalysisTK.jar -T IndelRealigner  -R ../ref/MIC.MAC.fasta -I  DisA1.sort.rmdup.bam -targetIntervals DisA1.sort.rmdup.intervals -o DisA1.sort.rmdup.realn.bam
+```
