@@ -76,7 +76,7 @@ bowtie2 --met-file DisA1 -p 10 --local -x ../ref/MAC_MIC.fasta --n-ceil 1  --tri
 ```
 
 The "-bS -f 0x3" flag tell samtools to output a bam file "-b" and the input is SAM format "S".
-The "-f 0x3" flag only keeps reads that are paired and properly mapped.  For more information on using the "-f" flag look at the samtools documentations and this website:
+The "-f 0x3" flag only keeps reads that are paired and properly mapped.  For more information on using the "-f" flag look at the samtools documentation and this website:
 
 http://picard.sourceforge.net/explain-flags.html
 
