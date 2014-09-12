@@ -123,7 +123,7 @@ java -Xmx20g -jar /usr/local/GenomeAnalysisTK-2.4-7-g5e89f01/GenomeAnalysisTK.ja
 
 ## Calling Variants
 
-For variant calling we used SNVer pooled.  Again there are several other programs that would work for variant calling.  It very much depends on what kind of sample you are working on.  For example if you are trying to identify low frequency variants the tool *LoFreq* might be right for you.  SNVer pooled produces a file for Single Nucleotide Variants SNVs and INDELs.  
+For variant calling we used SNVer pooled.  Again, there are several other programs that would work for variant calling.  It very much depends on what kind of sample you are working on.  For example if you are trying to identify low frequency variants the tool *LoFreq* might be right for you.  SNVer pooled produces a file for Single Nucleotide Variants SNVs and INDELs.  
 
 The config file "snver.file.txt":
 ```
