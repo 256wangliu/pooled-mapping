@@ -9,7 +9,7 @@ Diverge from this document as it becomes outdated or at your fancy.
 
 # Quality control
 
-Illumina paired end reads were checked for quality using fastqc which is avalible below.  The 5' 
+Fastqc was used to quality control the Illumina paired-end reads.  The 5' 
 and 3' end had lower quality than the rest of the reads.  There was no evidence of primer or adaptor 
 contamination. 
 
