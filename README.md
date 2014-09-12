@@ -83,7 +83,7 @@ http://picard.sourceforge.net/explain-flags.html
 ~/tools/samtools-0.1.18/samtools sort  DisA1.bam  DisA1.sort
 ```
 
-## Removing optical duplicates.
+## Removing optical duplicates:
 
 In this step we remove "optical/pcr duplicates".  These duplicate reads are a product of library preperation.  We use Samtools for this step, but Picard would also work.
 
@@ -93,4 +93,9 @@ removing duplicates:
  ~/tools/samtools-0.1.18/samtools rmdup B1868.sort.bam B1868.sort.rmdup.bam
  ~/tools/samtools-0.1.18/samtools rmdup DisA1.sort.bam DisA1.sort.rmdup.bam
  ```
-
+ 
+ ## Indexing the BAMs:
+ ```
+ ~/tools/samtools-0.1.18/samtools index B1868.sort.rmdup.bam
+ ~/tools/samtools-0.1.18/samtools index DisA1.sort.rmdup.bam
+ ```
