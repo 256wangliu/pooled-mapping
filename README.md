@@ -28,7 +28,7 @@ The Micro nucleous :
    ```
    tetrahymena_thermophila_sb210__mic__2_supercontigs.fasta.zip
    ``` 
-**Warning: The SB10 assemblies and annotations continue to improve.  Before you begin your mapping project be sure to check you are working with the most recent assembly and annotation.**
+**Warning: The SB10 assemblies and annotations continue to improve.  Before you begin your mapping project be sure to check that you are working with the most recent assembly and annotation.**
 
 Combine the two provided sequences after unzipping them using cat:
    ```
