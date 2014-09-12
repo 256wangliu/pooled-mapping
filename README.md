@@ -94,7 +94,8 @@ removing duplicates:
  ~/tools/samtools-0.1.18/samtools rmdup DisA1.sort.bam DisA1.sort.rmdup.bam
  ```
  
- ## Indexing the BAMs:
+## Indexing the BAMs:
+
  ```
  ~/tools/samtools-0.1.18/samtools index B1868.sort.rmdup.bam
  ~/tools/samtools-0.1.18/samtools index DisA1.sort.rmdup.bam
