@@ -18,16 +18,17 @@ contamination.
 We mapped the reads to against two Tetrahymena thermophila SB210 assemblies:
 
 The Macro nucleous :
-   
+   ```
    T_thermophila_June2014_assembly.fasta.txt.zip
-
+   ```
 The Micro nucleous : 
-
+   ```
    tetrahymena_thermophila_sb210__mic__2_supercontigs.fasta.zip
-
+   ``` 
 **Warning: The SB10 assemblies and annotations continue to improve.  Before you begin your mapping project be sure to check you are working with the most recent assembly and annotation.**
 
 Combine the two sequences after unzipping them using cat:
-
+   ```
    cat  T_thermophila_June2014_assembly.fasta.txt > MAC_MIC.fasta
    cat  tetrahymena_thermophila_sb210__mic__2_supercontigs.fasta >> MAC_MIC.fasta
+   ```
