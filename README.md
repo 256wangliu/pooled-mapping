@@ -139,3 +139,42 @@ java -Xmx50g -jar ~/tools/SNVerPool.jar -i ../raw_reads/ -t 0 -a 0 -u 2 -r ../re
 ```
 
 
+## Finding canidates by filtering samples based on allele frequency:
+
+We knew *DisA* was recessive so we setup simple heuristic filters.  This was done with a provided script "filter-recessive.pl."
+
+getting help:
+```
+perl filter-recessive.pl --help
+```
+ usage statement:
+ 
+ ```
+ Synopsis:
+
+cat my-snver-output.vcf | filter-recessive.pl
+
+Description:
+
+This script filters a SNVER pooled file.
+
+WARNING: the recessive mutant must be the first genotype column followed by the
+reference strain.  Any other ordering will not work.  Additional columns will be ignored
+
+Output:
+
+    seqid                      : The contig / scaffold / chromosome name
+    position                   : The position of the mutation
+    reference allele frequency : The frequency of the non-reference mutation in the control pool
+    mutant alllele frequency   : The frequency of the non-reference mutation in the mutant pool
+    delta af                   : The allele frequency difference between the mutant and control pool
+    fail - mutant in control   : We do not expect to see the mutation in the reference pool [0 = pass, 1 = fail]
+    fail - mutant af too low   : Under the recessive model we expect the allele frequency to be 1.0, however
+                                 sequencing errors could result in lower allele frequencies so the cutoff is 0.75 [0 = pass, 1 = fail]
+    fail - depth               : If the control or mutant pool has a depth below 5 [0 = pass, 1 = fail]
+    fail flags                 : The last three columns concatenated
+
+Contact:
+
+   Problems or questions: zev.kronenberg@gmail.com
+ ```
